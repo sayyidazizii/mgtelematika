@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Diskominfo Tugas Kuliah Perancangan Web</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +23,7 @@
     <!-- Untuk menyambungkan ke CSS -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="{{ asset('/style.css') }}">
-    
+
     <!-- Untuk menyambungkan ke JS -->
     <!-- <link rel="stylesheet" href="app.js"> -->
     <script  src="{{ asset('/js/app.js') }}"></script>
@@ -58,48 +58,47 @@
         text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
         font-size:22px;
         }
-        
+
         .judul{
             color:#3e3167;
         }
         /* Container holding the image and the text */
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+        .container {
+        position: relative;
+        text-align: center;
+        color: white;
+        }
 
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
+        /* Bottom left text */
+        .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        }
 
-.bItem {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 9px;
-  bottom: 0;
-  left: 9px;
-  padding: 18px;
-  background-size: cover;
-  background-position: center center;
-  /* background-image: url(http://kenwheeler.github.io/slick/img/fonz1.png); */
-}
-
-.bItem:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, black 100%);
-}
+        .bItem {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 9px;
+        bottom: 0;
+        left: 9px;
+        padding: 18px;
+        background-size: cover;
+        background-position: center center;
+        /* background-image: url(http://kenwheeler.github.io/slick/img/fonz1.png); */
+        }
+        .bItem:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 0%, black 100%);
+        }
     </style>
 
 </head>
@@ -108,19 +107,17 @@
 
 <!------------------- Top Bar ---------------->
 <div class=" fixed-top">
-<div class="text-white py-3"  style="background-color:#0095e1;">
-    <div class="container d-flex justify-content-end pe-5">
-        <div>
-            <i class="fas fa-phone-alt"></i> 
-            <a href="tel:+62 264 200036" style="color: #fff; text-decoration: none;">(0264) 200036</a>
-            &nbsp; | &nbsp;
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:info@diskominfo.purwakartakab.go.id" style="color: #fff; text-decoration: none;">info@diskominfo.purwakartakab.go.id</a>
+    <div class="text-white py-3"  style="background-color:#0095e1;">
+        <div class="container d-flex justify-content-end pe-5">
+            <div>
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+62 264 200036" style="color: #fff; text-decoration: none;">(0264) 200036</a>
+                &nbsp; | &nbsp;
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@diskominfo.purwakartakab.go.id" style="color: #fff; text-decoration: none;">info@diskominfo.purwakartakab.go.id</a>
+            </div>
         </div>
     </div>
-</div>
-
-
 
 
 <!---------------- Navbar ---------------->
@@ -156,7 +153,7 @@
                         <li><a class="dropdown-item" href="#">Daftar Pegawai</a></li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Berita</a>
                 </li>
@@ -300,8 +297,6 @@
 </div> -->
 
 
-
-
 <!---------------- Layanan  ---------------->
 
 <div class="container text-center my-5">
@@ -321,7 +316,7 @@
                 <img src="logo2.png" alt="Image 2" class="layanan-image">
                     <h5 class="card-title judul">Layanan</h5><br>
                     <a href="page2.html" class="btn btn-secondary"> Lihat Layanan » </a>
-                
+
             </div>
         </div>
 
@@ -330,7 +325,7 @@
                 <img src="logo3.png" alt="Image 3" class="layanan-image">
                     <h5 class="card-title judul">PPID</h5><br>
                     <a href="page3.html" class="btn btn-secondary"> Lihat Layanan » </a>
-                
+
             </div>
         </div>
     </div>
@@ -339,50 +334,16 @@
 
 <!---------------- Galerry Foto ---------------->
 <div class="container-fluid py-5" style="background-color:#0095e1;">
-    <h3 class="text-center  text-white mb-5">GALLERY FOTO</h3>
+    <h3 class="text-center text-white mb-5">GALLERY FOTO</h3>
     <div class="owl-carousel owl-theme">
+        @foreach($galleries as $gallery)
         <div class="item px-2">
             <a href="#" style="text-decoration:none;">
-                <img src="gambar1.jpg" class="img-fluid rounded" alt="Indahnya Diskominfo">
-                <h5 class="text-center text-light">Indahnya Diskominfo</h5>
-            </a>
-            <!-- <div class="card w-100" >
-                <img src="gambar1.jpg" class="card-img-top object-fit-cover" alt="Indahnya Diskominfo" style="width:100%;height:200px;">
-                <div class="card-body">
-                    <p class="card-text text-center">Indahnya Diskominfo</p>
-                </div>
-            </div> -->
-        </div>
-        <div class="item px-2">
-            <a href="#" style="text-decoration:none;">
-                <img src="gambar2.jpg" class="img-fluid rounded" alt="Tasyakuran Awal Tahun">
-                <h5 class="text-center text-light">Tasyakuran Awal Tahun</h5>
+                <img src="{{ asset($gallery->image_path) }}" class="img-fluid rounded" alt="{{ $gallery->name }}">
+                <h5 class="text-center text-light">{{ $gallery->name }}</h5>
             </a>
         </div>
-        <div class="item px-2">
-            <a href="#" style="text-decoration:none;">
-                <img src="gambar3.jpg" class="img-fluid rounded" alt="Peresmian Gedung Baru">
-                <h5 class="text-center text-light">Peresmian Gedung Baru</h5>
-            </a>
-        </div>
-        <div class="item px-2">
-            <a href="#" style="text-decoration:none;">
-                <img src="gambar4.jpg" class="img-fluid rounded" alt="CCTV Berhasil Terkoneksi">
-                <h5 class="text-center text-light">CCTV Berhasil Terkoneksi</h5>
-            </a>
-        </div>
-        <div class="item px-2">
-            <a href="#" style="text-decoration:none;">
-                <img src="gambar1.jpg" class="img-fluid rounded" alt="Indahnya Diskominfo">
-                <h5 class="text-center text-light">Indahnya Diskominfo</h5>
-            </a>
-        </div>
-        <div class="item px-2">
-            <a href="#" style="text-decoration:none;">
-                <img src="gambar4.jpg" class="img-fluid rounded" alt="CCTV Berhasil Terkoneksi">
-                <h5 class="text-center text-light">CCTV Berhasil Terkoneksi</h5>
-            </a>
-        </div>
+        @endforeach
     </div>
 </div>
 
@@ -504,7 +465,7 @@
                         <a href="#" class="btn btn-light">Lihat Detail</a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -614,10 +575,10 @@
                 <div class="footer-section">
                     <h3 class="text-start">Info Kontak</h3>
                         <div class="underline"></div>
-                        <p><i class="fas fa-envelope"></i> 
+                        <p><i class="fas fa-envelope"></i>
                             <a href="mailto:info@diskominfo.purwakartakab.go.id">info@diskominfo.purwakartakab.go.id</a>
                         </p>
-                        <p><i class="fas fa-phone-alt"></i> 
+                        <p><i class="fas fa-phone-alt"></i>
                             <a href="tel:+62 264 200036">(0264) 200036</a>
                         </p>
                     </div>
