@@ -298,7 +298,6 @@
 
 
 <!---------------- Layanan  ---------------->
-
 <div class="container text-center my-5">
     <h3 class="text-center judul">LAYANAN KAMI</h3>
     <div class="driver mx-auto  mb-5" style="width:80px;border:1px solid grey;"></div>
@@ -349,24 +348,23 @@
 
 
 <!---------------- Informasi Penting ---------------->
-
-
 <div class="container-fluid pt-5  mb-2 my-5">
     <h3 class="text-center judul">INFORMASI PENTING</h3>
     <div class="driver mx-auto  mb-5" style="width:80px;border:1px solid grey;"></div>
     <div class="owl-carousel owl-theme">
+        @foreach($informations as $information)
         <div class="item">
             <div class="rounded text-center p-2 mx-4 my-2" style="background-color:#0095e1;color:#fff;">
-                <img src="gambar2.jpg" class="img-fluid rounded" alt="Tasyakuran Awal Tahun">
-                <h5 class="text-center text-primary text-light">Tasyakuran Awal Tahun<br><br><br></h5>
+                <img src="{{ asset($information->image_path) }}" class="img-fluid rounded" alt="{{ $information->title }}">
+                <h5 class="text-center text-primary text-light">{{ $information->slug }}<br><br><br></h5>
                 <a href="#" class="btn btn-light" >Lihat Detail</a>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 
 <!---------------- Berita Terbaru Section ---------------->
-
 <section class="berita-terbaru py-5 mt-5">
     <div class="container">
         <h3 class="text-center judul">BERITA TERBARU</h3>
